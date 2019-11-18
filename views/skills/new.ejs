@@ -12,14 +12,15 @@
 <body>
   <nav>
     <a href="/">Home</a> |
-    <a href="/skills">All Skills</a>
+    <a href="/skills">Skill List</a>
   </nav>
-  <h1>Skill #<%= skillNum %></h1>
-  <h3><%= skill.skill %></h3>
-  <h3>Aquired: <%= skill.exp ? 'Yes' : 'No' %></h3>
 
-  <a href="/skills/<%= parseInt(skillNum)-1 %>/edit">Edit Skill</a>
+  <h1>Add New Skill</h1>
 
+  <form action="/skills" method="POST">
+    <input type="text" name="skill">
+    <button type="submit">Add Skill</button>
+  </form>
 </body>
 
 </html>
