@@ -29,7 +29,7 @@ function newSkill(req, res) {
 
 function create(req, res) {
     Skill.create(req.body);
-    res.direct('/skills');
+    res.redirect('/skills');
 };
 
 function edit(req, res){
